@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class MarkSheet here.
+ * PROG5001_Fundamental of Programming_ Assessment 1
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Subash Chapagain
+ * @12th July, 2024
  */
 public class MarkSheet
 {
