@@ -18,6 +18,9 @@ public class MarkSheet {
          double mark = (new Scanner(System.in)).nextDouble();
          studentMarks[i] = mark;
      }
-    
+     for (int i = 0; i < studentMarks.length; i++){
+         System.out.println("The marks of the students are: ");
+         
+     }
  }
 }
