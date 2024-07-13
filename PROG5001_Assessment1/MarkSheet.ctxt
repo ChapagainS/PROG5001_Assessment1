@@ -1,10 +1,5 @@
 #BlueJ class context
 comment0.target=MarkSheet
-comment0.text=\r\n\ PROG5001_Fundamental\ of\ Programming_\ Assessment\ 1\r\n\r\n\ @Subash\ Chapagain\r\n\ @12th\ July,\ 2024\r\n
-comment1.params=
-comment1.target=MarkSheet()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ MarkSheet\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
-numComments=3
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2
