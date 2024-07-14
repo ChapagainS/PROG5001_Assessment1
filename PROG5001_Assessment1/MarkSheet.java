@@ -12,14 +12,20 @@ public class MarkSheet {
  public static void main(String[] args) {
      System.out.println("Name of the Unit: ");
      String unitName = (new Scanner(System.in)).nextLine();
-     double[] studentMarks = new double[30];
-     for (int i=0; i<studentMarks.length; i++) {
-         System.out.println("Enter the mark for Student" + (i+1)+ ":");
+     String[] studentNames = new String[3];
+     double[] studentMarks = new double[3];
+     for (int i = 0; i<studentMarks.length; i++) {
+         System.out.println("Enter the name of the Student " + (i+1)+ ":" );
+         String name = (new Scanner(System.in)).nextLine();
+        
+         //System.out.println("Enter the mark for Student " + (i+1)+ ":");
+         System.out.println("Enter the mark for " + name+ ":");
          double mark = (new Scanner(System.in)).nextDouble();
          studentMarks[i] = mark;
      }
+     
      for (int i = 0; i < studentMarks.length; i++){
-         System.out.println("The marks of the students are: ");
+         System.out.println(studentNames[i] + "  " + studentMarks[i]);
          
      }
  }
