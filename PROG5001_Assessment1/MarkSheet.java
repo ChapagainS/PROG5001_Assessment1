@@ -11,10 +11,13 @@ public class MarkSheet {
     
  public static void main(String[] args) {
      
-     System.out.println("Name of the Unit: ");
-     String unitName = (new Scanner(System.in)).nextLine();
-     String[] studentNames = new String[30];
-     double[] studentMarks = new double[30];
+     System.out.println("Name of the Assignment: ");
+     String assignmentName = (new Scanner(System.in)).nextLine();
+     String[] studentNames = new String[3];
+     double[] studentMarks = new double[3];
+     
+     double highMarks = Double.MIN_VALUE;
+     double lowMarks = Double.MAX_VALUE;
      
      for (int i = 0; i<studentMarks.length; i++) {
          System.out.println("Enter the name of the Student " + (i+1)+ ":" );
@@ -34,12 +37,21 @@ public class MarkSheet {
         }
     }
          studentMarks[i] = mark;
+         if(mark > highMarks){
+             highMarks = mark;
+         }
+         if(mark < lowMarks){
+             lowMarks = mark;
+         }
      }
-     System.out.println(unitName + " - Student Marksheet");
+     System.out.println(assignmentName + " - Student Marksheet");
     for (int i = 0; i < studentMarks.length; i++){
          
          System.out.println(studentNames[i] + "  " + studentMarks[i]);
         }
+        System.out.println("The highest mark obtained is : " +highMarks);
+        System.out.println("The lowest score obtained is : " +lowMarks);
+    
  }
 }
 
