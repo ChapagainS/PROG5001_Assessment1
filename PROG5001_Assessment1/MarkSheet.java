@@ -17,6 +17,7 @@ public class MarkSheet {
      for (int i = 0; i<studentMarks.length; i++) {
          System.out.println("Enter the name of the Student " + (i+1)+ ":" );
          String name = (new Scanner(System.in)).nextLine();
+         studentNames[i] = name;
         
          //System.out.println("Enter the mark for Student " + (i+1)+ ":");
          System.out.println("Enter the mark for " + name+ ":");
