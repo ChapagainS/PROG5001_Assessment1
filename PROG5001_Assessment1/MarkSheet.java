@@ -13,8 +13,8 @@ public class MarkSheet {
      
      System.out.println("Name of the Unit: ");
      String unitName = (new Scanner(System.in)).nextLine();
-     String[] studentNames = new String[3];
-     double[] studentMarks = new double[3];
+     String[] studentNames = new String[30];
+     double[] studentMarks = new double[30];
      
      for (int i = 0; i<studentMarks.length; i++) {
          System.out.println("Enter the name of the Student " + (i+1)+ ":" );
@@ -23,19 +23,19 @@ public class MarkSheet {
         
          double mark = 0;
          
-         while (mark >= 0 || mark <= 100){
-         System.out.println("Enter the mark for " + name+ " (0 to 100) :");
+         while (mark >= 0 || mark <= 30){
+         System.out.println("Enter the mark for " + name+ " (0 to 30) :");
          mark = (new Scanner(System.in)).nextDouble();
          
-         if(mark >= 0 && mark <= 100){
+         if(mark >= 0 && mark <= 30){
              break;
         } else {
-            System.out.println("Invalid Value! The marks must be bewteen 0 to 100");
+            System.out.println("Invalid Value! The marks must be bewteen 0 to 30.");
         }
     }
          studentMarks[i] = mark;
      }
-     System.out.println(unitName + " Marksheet");
+     System.out.println(unitName + " - Student Marksheet");
     for (int i = 0; i < studentMarks.length; i++){
          
          System.out.println(studentNames[i] + "  " + studentMarks[i]);
