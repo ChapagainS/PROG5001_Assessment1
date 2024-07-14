@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class MarkSheet {
     
  public static void main(String[] args) {
-     //Scanner scanner = new Scanner(System.in);
+     
      System.out.println("Name of the Unit: ");
      String unitName = (new Scanner(System.in)).nextLine();
      String[] studentNames = new String[3];
@@ -21,7 +21,6 @@ public class MarkSheet {
          String name = (new Scanner(System.in)).nextLine();
          studentNames[i] = name;
         
-         //System.out.println("Enter the mark for Student " + (i+1)+ ":");
          double mark = 0;
          
          while (mark >= 0 || mark <= 100){
