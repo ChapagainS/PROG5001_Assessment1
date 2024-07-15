@@ -18,6 +18,7 @@ public class MarkSheet {
      
      double highMarks = Double.MIN_VALUE;
      double lowMarks = Double.MAX_VALUE;
+     double total = 0;
      
      for (int i = 0; i<studentMarks.length; i++) {
          System.out.println("Enter the name of the Student " + (i+1)+ ":" );
@@ -43,15 +44,21 @@ public class MarkSheet {
          if(mark < lowMarks){
              lowMarks = mark;
          }
-     }
-     System.out.println(assignmentName + " - Student Marksheet");
+         
+             total += mark;
+         
+        }
+          double mean = total/studentMarks.length;  
+        
+        
+         System.out.println(assignmentName + " - Student Marksheet");
     for (int i = 0; i < studentMarks.length; i++){
          
          System.out.println(studentNames[i] + "  " + studentMarks[i]);
         }
         System.out.println("The highest mark obtained is : " +highMarks);
         System.out.println("The lowest score obtained is : " +lowMarks);
-    
+        System.out.println("The mean score obtained is: " +mean);
  }
 }
 
