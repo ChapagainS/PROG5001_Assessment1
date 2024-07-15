@@ -13,8 +13,8 @@ public class MarkSheet {
      
      System.out.println("Name of the Assignment: ");
      String assignmentName = (new Scanner(System.in)).nextLine();
-     String[] studentNames = new String[30];
-     double[] studentMarks = new double[30];
+     String[] studentNames = new String[3];
+     double[] studentMarks = new double[3];
      
      double highMarks = Double.MIN_VALUE;
      double lowMarks = Double.MAX_VALUE;
@@ -47,6 +47,12 @@ public class MarkSheet {
              total += mark;
         }
           double mean = total/studentMarks.length;  
+          
+          double sumSquareDiff = 0;
+          for (double mark: studentMarks) {
+              sumSquareDiff += Math.pow(mark - mean, 2);
+            }
+        double standardDeviation = Math.sqrt(sumSquareDiff / studentMarks.length);
         
          System.out.println(assignmentName + " --- Student Marksheet");
     for (int i = 0; i < studentMarks.length; i++){
@@ -56,6 +62,7 @@ public class MarkSheet {
         System.out.println("The highest mark obtained is : " +highMarks);
         System.out.println("The lowest score obtained is : " +lowMarks);
         System.out.println("The mean score obtained is: " +mean);
+        System.out.println("The standard deviation is: " +standardDeviation);
  }
 }
 
