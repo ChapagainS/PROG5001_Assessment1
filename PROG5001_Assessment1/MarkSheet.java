@@ -13,8 +13,8 @@ public class MarkSheet {
      
      System.out.println("Name of the Assignment: ");
      String assignmentName = (new Scanner(System.in)).nextLine();
-     String[] studentNames = new String[3];
-     double[] studentMarks = new double[3];
+     String[] studentNames = new String[30];
+     double[] studentMarks = new double[30];
      
      double highMarks = Double.MIN_VALUE;
      double lowMarks = Double.MAX_VALUE;
@@ -44,14 +44,11 @@ public class MarkSheet {
          if(mark < lowMarks){
              lowMarks = mark;
          }
-         
              total += mark;
-         
         }
           double mean = total/studentMarks.length;  
         
-        
-         System.out.println(assignmentName + " - Student Marksheet");
+         System.out.println(assignmentName + " --- Student Marksheet");
     for (int i = 0; i < studentMarks.length; i++){
          
          System.out.println(studentNames[i] + "  " + studentMarks[i]);
